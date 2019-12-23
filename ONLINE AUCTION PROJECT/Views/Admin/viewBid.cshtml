@@ -1,0 +1,74 @@
+﻿@model IEnumerable<ONLINE_AUCTION_PROJECT.Models.Item>
+
+@{
+    ViewBag.Title = "viewBid";
+}
+
+<h2>viewBid</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Item_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Item_Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bid_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bid_Sdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bid_Edate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bid_Increament)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Min_Bid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cat_id)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Item_title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Item_Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bid_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bid_Sdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bid_Edate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bid_Increament)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Min_Bid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cat_id)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Item_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Item_id })
+        </td>
+    </tr>
+}
+
+</table>

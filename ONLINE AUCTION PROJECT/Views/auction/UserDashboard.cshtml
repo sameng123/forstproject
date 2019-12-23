@@ -1,0 +1,142 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Title  -->
+    <title>South - Real Estate Agency Template | About Us</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="/img/core-img/favicon.ico">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #8080FF;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #FFF;
+                display: block;
+                transition: 0.3s;
+            }
+
+                .sidenav a:hover {
+                    color: #FFD3A8;
+                }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+    </style>
+
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+
+</head>
+<body background="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-light-blue-solid-color-background.jpg">
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/auction/aboutus">About</a>
+        <a href="/auction/contact">Contact</a>
+        <a href="/auction/Details">Details</a>
+    </div>
+
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer; color:#8080FF;" onclick="openNav()">&#9776; open</span>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+
+    </script>
+
+    <h1 style="color:#8080FF; text-align:center; font-weight:900px">User DASHBOARD</h1>
+
+    <br />
+
+    <input type="button" class="btn btn-info float-md-right" value="ADD ITEM" style="margin-right:30%" onclick="window.location='@Url.Action("Add Item", "auction")'" />
+    <input type="button" class="btn btn-info float-md-right" value="VIEW ITEM" style="margin-right:25%" onclick="window.location='@Url.Action("ViewItem", "auction")'" />
+    <br /><br /><br />
+
+    <img src="https://ak5.picdn.net/shutterstock/videos/35062705/thumb/12.jpg" width="50%" height="50%" class="center" />
+
+    <br />
+
+    <h5 style="color:#8080FF; text-align:center; font-size:36px">Buy EveryThing From Here</h5>
+
+    <br />
+
+    <br /><br />
+
+
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="/js/plugins.js"></script>
+    <script src="/js/classy-nav.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <!-- Active js -->
+    <script src="/js/active.js"></script>
+</body>
+</html>
